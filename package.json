@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/akyuujs/akyuu-json-cuoutput/issues"
   },
-  "homepage": "https://github.com/akyuujs/akyuu-json-cuoutput#readme"
+  "homepage": "https://github.com/akyuujs/akyuu-json-cuoutput#readme",
+  "dependencies": {
+    "config.util": "^1.20.2-1"
+  }
 }
