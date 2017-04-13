@@ -1,6 +1,6 @@
 {
   "name": "akyuu-json-cuoutput",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Plugin for Akyuujs to convert between camel and underscore in JSON output.",
   "main": "index.js",
   "scripts": {
