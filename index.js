@@ -5,6 +5,8 @@
  * reserved.
  */
 "use strict";
+
+var changeCase = require("change-case");
 var _util = require("config.util");
 
 var DEFAULT_OPTIONS = {
@@ -22,11 +24,11 @@ CUOutputer.prototype._transformKey = function(key) {
     if(typeof key !== "string") return key;
 
     switch(this.options.output) {
-        case "underscore": return key.underscore();
-        case "lower_camelize": return key.camelize(false);
-        case "upper_camelize": return key.camelize(true);
-        case "hyphen": return key.dasherize();
-        default: return key.underscore();
+        case "underscore": return changeCase.snakeCase(key);
+        case "lower_camelize": return changeCase.camelCase(key);
+        case "upper_camelize": return changeCase.pascalCase(key);
+        case "hyphen": return changeCase.paramCase(key);
+        default: return changeCase.snakeCase(key);
     }
 };
 
